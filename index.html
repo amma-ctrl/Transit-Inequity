@@ -8,44 +8,61 @@
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: #f2f6f8;
-      color: #1a1a1a;
-      padding: 0 3em;
+      background-color: #111; /* dark map-style background */
+      color: #f4f4f4; /* light text for readability */
     }
 
     header {
-      background-color: #1a5a96;
+      background-color: #0a1e3f; /* deep navy blue like legend title */
       color: white;
       padding: 2em 1em;
       text-align: center;
     }
 
     header h1 {
-      margin-bottom: 0.2em;
+      margin: 0;
       font-size: 2.5em;
     }
 
+    header p {
+      font-size: 1.2em;
+      margin-top: 0.3em;
+    }
+
     section {
-      margin: 2em 0;
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1.5em;
     }
 
     h2 {
-      color: #1a5a96;
+      color: #59c3c3; /* bright cyan-turquoise, good contrast */
       margin-top: 1.5em;
     }
 
-    p {
-      margin-bottom: 1em;
+    h3 {
+      color: #f9a825; /* orange-yellow tone from stop symbols */
     }
 
-    .dashboard-link {
-      background-color: #ffa600;
-      color: #fff;
-      display: inline-block;
-      padding: 0.5em 1em;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 1em;
+    ul {
+      margin-bottom: 1em;
+      padding-left: 1.2em;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 700px;
+      border: none;
+      margin: 2em 0;
+    }
+
+    a {
+      color: #ffa600;
     }
   </style>
 </head>
@@ -54,8 +71,11 @@
   <header>
     <h1>Transit Inequity in NYC & the Bay Area</h1>
     <p>Visualizing access gaps and service disparities across income and geography</p>
-    <a class="dashboard-link" href="https://prattsavi.maps.arcgis.com/apps/dashboards/fb8293ccf2fc4cbf8eb241a1334e99de" target="_blank">View the Interactive Dashboard</a>
   </header>
+
+  <section>
+    <iframe src="https://prattsavi.maps.arcgis.com/apps/dashboards/fb8293ccf2fc4cbf8eb241a1334e99de" title="Transit Inequity Dashboard"></iframe>
+  </section>
 
   <section>
     <h2>Introduction & Research Design</h2>
@@ -68,10 +88,7 @@
       <li>Where are the geographic “transit deserts” that lack even minimal access to federally funded transit services?</li>
       <li>How does the frequency of transit service vary across income levels?</li>
     </ul>
-    <p>
-      <strong>Hypotheses:</strong>  
-      Low-income census tracts have less access to frequent transit service than wealthier tracts, and areas with no transit access are disproportionately located in low- to moderate-income zones.
-    </p>
+    <p><strong>Hypotheses:</strong> Low-income census tracts have less access to frequent transit service than wealthier tracts, and areas with no transit access are disproportionately located in low- to moderate-income zones.</p>
     <p>
       This research builds on findings by Manaugh & El-Geneidy (2012) and Karner & Niemeier (2013), who argue that frequency and reliability—beyond stop proximity—are critical indicators of transit equity.
     </p>
@@ -143,9 +160,9 @@
   <section>
     <h2>References</h2>
     <ul>
-      <li>Manaugh, K., & El-Geneidy, A. (2012). Who benefits from new transportation infrastructure? *Research in Transportation Business & Management*, 3, 8–17.</li>
-      <li>Karner, A., & Niemeier, D. (2013). Civil rights guidance and equity analysis methods for regional transportation plans. *Journal of Transport Geography*, 33, 126–134.</li>
-      <li>Jiao, J., & Dillivan, M. (2013). Transit Deserts: The Gap between Demand and Supply. *Journal of Public Transportation*, 16(3), 23–39.</li>
+      <li>Manaugh, K., & El-Geneidy, A. (2012). Who benefits from new transportation infrastructure? <em>Research in Transportation Business & Management</em>, 3, 8–17.</li>
+      <li>Karner, A., & Niemeier, D. (2013). Civil rights guidance and equity analysis methods for regional transportation plans. <em>Journal of Transport Geography</em>, 33, 126–134.</li>
+      <li>Jiao, J., & Dillivan, M. (2013). Transit Deserts: The Gap between Demand and Supply. <em>Journal of Public Transportation</em>, 16(3), 23–39.</li>
     </ul>
   </section>
 

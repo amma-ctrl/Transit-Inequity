@@ -65,7 +65,20 @@
     <h1>Transit Inequity in NYC & the Bay Area</h1>
     <p>Visualizing access gaps and service disparities across income and geography</p>
   </header>
+ 
+  <main>
+    <h2>Introduction</h2>
+      <p>Public transportation is often championed as a cornerstone of equitable urban life, providing affordable access to employment, education, health care, and social networks. In theory, robust transit infrastructure funded by federal investment should serve all residents equitably. However, in practice, access to public transit, especially reliable and frequent service, remains profoundly uneven. This project investigates spatial inequities in access to federally funded transit in two of the most transit-reliant metropolitan regions in the United States: New York City and the San Francisco Bay Area. Using a combination of General Transit Feed Specification (GTFS) data, American Comunity Survey (ACS) census demographics, and spatial analysis tools in ArcGIS Pro, this study visualizes and interprets the geographic distribution of transit frequency, coverage, and its alignment with household income.</p>
 
+    <h2>Research Questions and Literature Context</h2>
+      <p>My research was guided by one core question: do lower-income communities in these cities receive the same level of access to frequent and reliable federally funded transit services as wealthier communities? To answer this question, the analysis drew from and builds upon transportation equity literature that critiques the limitations of stop proximity as a sole measure of accessibility. Manaugh and El-Geneidy (2012), for example, emphasize that transit frequency is a crucial determinant of effective mobility, one that is often unequally distributed across income and racial lines. Similarly, Karner and Niemeier (2013) argue for the integration of social equity into transportation planning metrics, insisting that service provision must account for demographic disparities, not just geographic coverage.</p>
+
+    <h2>Methodology</h2>
+      <p>In my analysis, I focused on federally funded local modes of transportation, including New York’s MTA Subway, MTA Bus, NYDOT’s Staten Island Ferry, and the Bay Area’s BART, Muni (bus and rail), AC Transit, SamTrans, VTA, Golden Gate Ferry, and San Francisco Bay Ferry. Using GTFS data, I parsed through weekday schedules, trips, and stop times to calculate average wait times at each transit stop. Any stop with an average headway greater than 20 minutes was classified as low-frequency. These stops were then spatially joined to census tracts to calculate the total number of low-frequency stops per tract.</p>
+      <p>In parallel, a no-transit-access zone layer was created by buffering each bus and rail stop by 0.5 miles, and each ferry stop by 0.75 miles, reflecting commonly used planning standards for walkable access. Areas not intersected by any of these buffers were dissolved into polygons and mapped as red diamond symbols, visually emphasizing spatial exclusion from the entire transit network.</p>
+      <p>Lastly, demographic data from the most recent year of the American Community Survey was layered onto the maps using a five-class gradient of median household income: under $50,000, $50,000–$85,000, $85,000–$125,000, $125,000–$200,000, and over $200,000. Each class was assigned a color along a yellow-to-blue sequential ramp, providing an immediate visual link between income and transit conditions.</p>
+  </main>
+  
   <div class="dashboard-container">
     <iframe src="https://prattsavi.maps.arcgis.com/apps/dashboards/fb8293ccf2fc4cbf8eb241a1334e99de" title="Transit Inequity Dashboard"></iframe>
   </div>

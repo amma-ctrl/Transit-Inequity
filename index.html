@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Transit Inequity Dashboard</title>
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
@@ -13,8 +17,7 @@
     }
 
     header {
-      width: 100vw;
-      box-sizing: border-box;
+      width: 100%;
       background-color: #1a5a96;
       color: white;
       padding: 1.5em 2em;
@@ -40,11 +43,16 @@
       margin: 0.5em 0 1em;
     }
 
+    .dashboard-frame {
+      width: 100%;
+      overflow: hidden;
+    }
+
     iframe {
-      width: 100vw;
+      display: block;
+      width: 100%;
       height: 90vh;
       border: none;
-      display: block;
       margin: 0;
     }
 
@@ -85,38 +93,44 @@
       <h2>Dashboard 1: No Transit Access Zones</h2>
       <p>This dashboard identifies areas outside a ¼-mile walkable buffer from any bus or rail stop. These locations are true “transit deserts” — communities with no formal access to the regional transit network.</p>
     </section>
+  </div>
 
+  <div class="dashboard-frame">
     <iframe src="https://prattsavi.maps.arcgis.com/apps/dashboards/8b77949d3e674b4d82f80e14bad0d07c" allowfullscreen></iframe>
+  </div>
 
-    <div class="content">
-      <section>
-        <h2>Dashboard 2: Low-Frequency Transit Areas</h2>
-        <p>This dashboard highlights communities with transit stops, but with low service frequency — typically fewer than 3 trips per hour. These areas represent hidden inaccessibility, where transit exists but is not reliable enough for daily use.</p>
-      </section>
-    </div>
+  <div class="content">
+    <section>
+      <h2>Dashboard 2: Low-Frequency Transit Areas</h2>
+      <p>This dashboard highlights communities with transit stops, but with low service frequency — typically fewer than 3 trips per hour. These areas represent hidden inaccessibility, where transit exists but is not reliable enough for daily use.</p>
+    </section>
+  </div>
 
+  <div class="dashboard-frame">
     <iframe src="https://prattsavi.maps.arcgis.com/apps/dashboards/fb8293ccf2fc4cbf8eb241a1334e99de" allowfullscreen></iframe>
+  </div>
 
-    <div class="content">
-      <section>
-        <h2>Methodology</h2>
-        <p>Using ArcGIS Pro, we conducted overlay analysis to buffer transit stops, identify low-frequency services, and intersect results with demographic and income data from the 2020 ACS. Results were symbolized by severity and visualized in ArcGIS Dashboards.</p>
-      </section>
+  <div class="content">
+    <section>
+      <h2>Methodology</h2>
+      <p>Using ArcGIS Pro, we conducted overlay analysis to buffer transit stops, identify low-frequency services, and intersect results with demographic and income data from the 2020 ACS. Results were symbolized by severity and visualized in ArcGIS Dashboards.</p>
+    </section>
 
-      <section>
-        <h2>Findings</h2>
-        <p>Communities in East Bay (e.g., Richmond, Antioch, San Leandro) and outer suburban areas showed significant lack of access and low-frequency service. These areas also had higher proportions of lower-income households and communities of color, highlighting structural transit inequities.</p>
-      </section>
+    <section>
+      <h2>Findings</h2>
+      <p>Communities in East Bay (e.g., Richmond, Antioch, San Leandro) and outer suburban areas showed significant lack of access and low-frequency service. These areas also had higher proportions of lower-income households and communities of color, highlighting structural transit inequities.</p>
+    </section>
 
-      <section>
-        <h2>Conclusion</h2>
-        <p>Transit availability alone is not enough — frequency and walkable access are key to mobility equity. This work supports the need for regional investment in underserved neighborhoods and more transparent service planning tools.</p>
-      </section>
-    </div>
+    <section>
+      <h2>Conclusion</h2>
+      <p>Transit availability alone is not enough — frequency and walkable access are key to mobility equity. This work supports the need for regional investment in underserved neighborhoods and more transparent service planning tools.</p>
+    </section>
+  </div>
 
   <footer>
-    &copy; 2025 Amen Hailu | INFO 609 - Final Project | Transit Inequity
+    &copy; 2025 Amen Hailu | INFO 609 - Final Project | Built with ArcGIS & GitHub Pages
   </footer>
 
 </body>
 </html>
+

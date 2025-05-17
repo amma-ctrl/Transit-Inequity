@@ -4,46 +4,61 @@
   <meta charset="UTF-8">
   <title>Transit Inequity Dashboard</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #222;
-      padding-bottom: 4em;
+      background-color: #1c1c1c; /* dark gray/black */
+      color: #e6e6e6; /* light gray text */
     }
 
     header {
-      background-color: #1a5a96;
+      background-color: #1a5a96; /* blue like in your legend */
       color: white;
-      padding: 2em;
+      padding: 1.5em 1em;
       text-align: center;
-    }
-
-    h1, h2 {
-      margin-top: 1em;
     }
 
     .content {
-      max-width: 900px;
-      margin: auto;
-      padding: 2em;
-      background: white;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1em;
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    h1, h2 {
+      color: #f6c400; /* golden yellow from the low-frequency stops */
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      margin: 0.5em 0 1em;
     }
 
     iframe {
-      width: 100%;
-      height: 800px;
+      width: 100vw;
+      height: 90vh;
       border: none;
-      margin-top: 1em;
-      margin-bottom: 3em;
+      display: block;
+      margin: 0;
     }
 
     footer {
+      background-color: #121212;
       text-align: center;
       padding: 1em;
       font-size: 0.9em;
-      color: #666;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        height: 70vh;
+      }
     }
   </style>
 </head>
@@ -51,56 +66,53 @@
 
   <header>
     <h1>Transit Inequity in the San Francisco Bay Area</h1>
-    <p>Visualizing public transit access gaps and demographic impacts</p>
+    <p>Visualizing access gaps and service disparities across income and geography</p>
   </header>
 
   <div class="content">
 
     <section>
       <h2>Overview</h2>
-      <p>This project investigates spatial inequities in public transit access across the Bay Area. Using data from the National Transit Database and U.S. Census, we created dashboards to visualize areas lacking reliable transit and explore how these gaps correlate with socioeconomic characteristics such as income, race, and vehicle ownership.</p>
+      <p>This project investigates transit access disparities across the Bay Area using spatial analysis and open data. Dashboards below show areas completely lacking access and zones with low-frequency transit service, visualized alongside demographic and income patterns.</p>
     </section>
 
     <section>
-      <h2>Dashboard 1: Bay Area Transit Access</h2>
-      <p>This dashboard highlights areas that fall outside a ¼-mile walkable buffer of any public transit stop (bus or train). These zones represent "true transit deserts" — communities with no nearby transit infrastructure.</p>
-      <iframe src="https://prattsavi.maps.arcgis.com/apps/dashboards/8b77949d3e674b4d82f80e14bad0d07c" allowfullscreen></iframe>
+      <h2>Dashboard 1: No Transit Access Zones</h2>
+      <p>This dashboard identifies areas outside a ¼-mile walkable buffer from any bus or rail stop. These locations are true “transit deserts” — communities with no formal access to the regional transit network.</p>
     </section>
+
+    <iframe src="https://prattsavi.maps.arcgis.com/apps/dashboards/8b77949d3e674b4d82f80e14bad0d07c" allowfullscreen></iframe>
 
     <section>
       <h2>Dashboard 2: Low-Frequency Transit Areas</h2>
-      <p>This dashboard displays areas where transit stops exist but service frequency is below a usable threshold (e.g., fewer than 3 trips per hour). These areas reveal the hidden inaccessibility masked by apparent coverage.</p>
-      <iframe src="https://prattsavi.maps.arcgis.com/apps/dashboards/fb8293ccf2fc4cbf8eb241a1334e99de" allowfullscreen></iframe>
+      <p>This dashboard highlights communities with transit stops, but with low service frequency — typically fewer than 3 trips per hour. These areas represent hidden inaccessibility, where transit exists but is not reliable enough for daily use.</p>
     </section>
+
+    <iframe src="https://prattsavi.maps.arcgis.com/apps/dashboards/fb8293ccf2fc4cbf8eb241a1334e99de" allowfullscreen></iframe>
 
     <section>
       <h2>Methodology</h2>
-      <p>
-        fill
-      </p>
+      <p>Using ArcGIS Pro, we conducted overlay analysis to buffer transit stops, identify low-frequency services, and intersect results with demographic and income data from the 2020 ACS. Results were symbolized by severity and visualized in ArcGIS Dashboards.</p>
     </section>
 
     <section>
       <h2>Findings</h2>
-      <p>
-        fill
-      </p>
+      <p>Communities in East Bay (e.g., Richmond, Antioch, San Leandro) and outer suburban areas showed significant lack of access and low-frequency service. These areas also had higher proportions of lower-income households and communities of color, highlighting structural transit inequities.</p>
     </section>
 
     <section>
       <h2>Conclusion</h2>
-      <p>
-        fill
-      </p>
+      <p>Transit availability alone is not enough — frequency and walkable access are key to mobility equity. This work supports the need for regional investment in underserved neighborhoods and more transparent service planning tools.</p>
     </section>
 
   </div>
 
   <footer>
-    &copy; 2025 Amen Hailu | INFO 609 - Introduction to Spatial Thinking & GIS: Final Project
+    &copy; 2025 Amen Hailu | INFO 609 - Final Project | Built with ArcGIS & GitHub Pages
   </footer>
 
 </body>
 </html>
+
 
 

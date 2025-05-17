@@ -7,9 +7,9 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #111; /* dark background */
-      color: #f4f4f4; /* light text */
+      line-height: 1.8;
+      background-color: #111;
+      color: #f4f4f4;
     }
 
     header {
@@ -42,7 +42,7 @@
       display: block;
     }
 
-    section {
+    main {
       max-width: 900px;
       margin: 2em auto;
       padding: 0 1.5em;
@@ -50,20 +50,12 @@
 
     h2 {
       color: #59c3c3;
-      margin-top: 1.5em;
+      margin-top: 2em;
     }
 
     h3 {
       color: #f9a825;
-    }
-
-    ul {
-      margin-bottom: 1em;
-      padding-left: 1.2em;
-    }
-
-    li {
-      margin-bottom: 0.5em;
+      margin-top: 1.5em;
     }
   </style>
 </head>
@@ -78,94 +70,29 @@
     <iframe src="https://prattsavi.maps.arcgis.com/apps/dashboards/fb8293ccf2fc4cbf8eb241a1334e99de" title="Transit Inequity Dashboard"></iframe>
   </div>
 
-  <section>
-    <h2>Introduction & Research Design</h2>
-    <p>
-      Access to reliable public transportation is a foundational element of urban equity, shaping economic opportunity, social inclusion, and quality of life. This project explores whether federally funded public transit systems in two of the most transit-reliant cities in the U.S.—New York City and the San Francisco Bay Area—provide equitable service across income levels and geographies.
-    </p>
-    <p><strong>Research Questions:</strong></p>
-    <ul>
-      <li>Do lower-income communities have comparable access to public transit infrastructure as wealthier communities?</li>
-      <li>Where are the geographic “transit deserts” that lack even minimal access to federally funded transit services?</li>
-      <li>How does the frequency of transit service vary across income levels?</li>
-    </ul>
-    <p><strong>Hypotheses:</strong> Low-income census tracts have less access to frequent transit service than wealthier tracts, and areas with no transit access are disproportionately located in low- to moderate-income zones.</p>
-    <p>
-      This research builds on findings by Manaugh & El-Geneidy (2012) and Karner & Niemeier (2013), who argue that frequency and reliability—beyond stop proximity—are critical indicators of transit equity.
-    </p>
-  </section>
+  <main>
+    <h2>Introduction</h2>
+    <p>Public transportation is often championed as a cornerstone of equitable urban life...</p>
 
-  <section>
+    <h2>Research Questions and Literature Context</h2>
+    <p>The research is guided by three core questions...</p>
+
     <h2>Methodology</h2>
-    <p>This study used ArcGIS Pro to prepare, analyze, and visualize transit and demographic data through a three-layer map structure embedded in a dashboard:</p>
-    <ul>
-      <li><strong>Transit Frequency:</strong> Using GTFS data, stops were flagged as “low-frequency” if they had average weekday headways of 20+ minutes.</li>
-      <li><strong>Low-Frequency Stop Counts:</strong> Total low-frequency stops per census tract were calculated using spatial join, then visualized as semi-transparent orange circles.</li>
-      <li><strong>No Access Zones:</strong> Red diamonds mark zones more than 0.5 miles from any bus/train stop and 0.75 miles from any ferry stop—areas considered to have no practical access to transit.</li>
-      <li><strong>Demographic Overlay:</strong> Census tracts were color-coded by median household income using a yellow-green-blue scale across 5 brackets:</li>
-      <ul>
-        <li>&lt; $50,000</li>
-        <li>$50,000–$85,000</li>
-        <li>$85,000–$125,000</li>
-        <li>$125,000–$200,000</li>
-        <li>&gt; $200,000</li>
-      </ul>
-    </ul>
-  </section>
+    <p>The analysis focused on federally funded modes of transportation...</p>
 
-  <section>
-    <h2>Findings</h2>
-    <h3>Low-Frequency Stops</h3>
-    <p>
-      In both NYC and the Bay Area, low-frequency stops cluster in outer boroughs or suburban peripheries. Queens, Staten Island, North San Jose, and Alameda County show notable concentrations—particularly in tracts earning under $85,000. This pattern reinforces the idea that transit frequency is unequally distributed.
-    </p>
+    <h2>Map Interpretation and Findings</h2>
+    <p>The resulting dashboard reveals several striking patterns...</p>
 
-    <h3>No Access Zones</h3>
-    <p>
-      These transit deserts—areas completely outside effective transit reach—appear most often in outlying geographies: Staten Island’s eastern edge, Contra Costa County, and areas bordering the Bronx River. While some overlap with lower-income tracts, others affect middle-income zones as well.
-    </p>
+    <h2>Evaluation and Limitations</h2>
+    <p>While the spatial analysis is rigorous and the visualizations are compelling...</p>
 
-    <h3>Demographic Insights</h3>
-    <p>
-      High-frequency transit and dense service areas tend to align with higher-income tracts. Conversely, moderate- to low-income areas are disproportionately impacted by infrequent or nonexistent service—highlighting a clear equity gap.
-    </p>
-  </section>
+    <h2>Next Steps and Opportunities</h2>
+    <p>Despite these limitations, the dashboard offers a robust foundation for further investigation...</p>
 
-  <section>
-    <h2>Evaluation & Limitations</h2>
-    <p>
-      This project succeeds in making spatial transit inequities visible—layering frequency, access, and income to reveal service gaps that a simple coverage map might miss. However, several limitations should be noted:
-    </p>
-    <ul>
-      <li>Only weekday service was analyzed; off-peak or weekend frequencies may differ significantly.</li>
-      <li>GTFS headways were averaged, not weighted by ridership or time-of-day.</li>
-      <li>Federal funding levels per route or agency were not included in this version.</li>
-    </ul>
-    <p>
-      Despite these, the dashboard provides a strong foundation for advocacy and deeper research into equitable transit funding and design.
-    </p>
-  </section>
-
-  <section>
-    <h2>Next Steps</h2>
-    <ul>
-      <li>Incorporate actual funding data for each agency and route.</li>
-      <li>Add racial and car access data for sharper equity comparisons.</li>
-      <li>Apply this framework to other metro areas or run a historical comparison.</li>
-    </ul>
-    <p>
-      The long-term goal is to develop a national-level toolkit for evaluating federally funded transit through an equity lens—balancing frequency, access, and demographics.
-    </p>
-  </section>
-
-  <section>
-    <h2>References</h2>
-    <ul>
-      <li>Manaugh, K., & El-Geneidy, A. (2012). Who benefits from new transportation infrastructure? <em>Research in Transportation Business & Management</em>, 3, 8–17.</li>
-      <li>Karner, A., & Niemeier, D. (2013). Civil rights guidance and equity analysis methods for regional transportation plans. <em>Journal of Transport Geography</em>, 33, 126–134.</li>
-      <li>Jiao, J., & Dillivan, M. (2013). Transit Deserts: The Gap between Demand and Supply. <em>Journal of Public Transportation</em>, 16(3), 23–39.</li>
-    </ul>
-  </section>
+    <h2>Conclusion</h2>
+    <p>In conclusion, this research makes a compelling case that public transit access...</p>
+  </main>
 
 </body>
 </html>
+
